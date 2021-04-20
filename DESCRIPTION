@@ -1,0 +1,13 @@
+Package: HDsst
+Type: Package
+Title: Sea Surface temperature (GHRSST) manipulation package
+Version: 0.1.0
+Author@R: c(person("Grant","Humphries",email="grant.humphries@hidefsurveying.co.uk"),role = c("aut","cre"))
+Maintainer: Grant Humphries <grant.humphries@hidefsurveying.co.uk>
+Description: This internal HiDef R package allows for the download and 
+    structuring of sea surface temperature
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/HiDefAerialSurveying/HDsst
+RoxygenNote: 7.1.1
