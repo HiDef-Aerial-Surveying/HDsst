@@ -2,7 +2,7 @@
 % Please edit documentation in R/nc_to_raster.R
 \name{nc_to_raster}
 \alias{nc_to_raster}
-\title{Utility functions for the HDsst package}
+\title{Reads a netCDF file and returns a raster}
 \usage{
 nc_to_raster(filepath, bbox = c(-15, 10, 45, 62))
 }
@@ -18,6 +18,6 @@ A raster object
 Reads a netCDF file and returns a raster
 }
 \examples{
-P <- nc_to_raster(filepath="/ncdata.ncf",bbox=c(-15,10,45,62))
+r <- nc_to_raster(filepath="/ncdata.ncf",bbox=c(-15,10,45,62))
 
 }

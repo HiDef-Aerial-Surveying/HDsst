@@ -27,7 +27,11 @@ nc_to_raster <- function(filepath,bbox=c(-15,10,45,62)){
   if(ymax > 62){
     stop("ymax out of bounds")
   }
-  nc_data <- ncdf4::nc_open(filepath)
+
+  tryCatch(nc_data <- ncdf4::nc_open(filepath),
+           error=function(e){stop("File not found - are you connected to the VPN? Or, check filename")}
+  )
+
   ## Get lon and lat arrays
   lon <- ncvar_get(nc_data, "lon")
   lat <- ncvar_get(nc_data, "lat", verbose = F)

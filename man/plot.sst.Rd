@@ -4,7 +4,7 @@
 \alias{plot.sst}
 \title{Plot one NCDF file downloaded from GHRSST}
 \usage{
-\method{plot}{sst}(filepath, bbox = c(-15, 10, 45, 62))
+plot.sst(filepath, bbox = c(-15, 10, 45, 62))
 }
 \arguments{
 \item{filepath}{A character string for the filename}
@@ -12,7 +12,7 @@
 \item{bbox}{(optional) A vector in the format Xmin, Xmax, Ymin, Ymax for plotting.}
 }
 \value{
-A ggplot object
+A levelplot object from the rasterVis library
 }
 \description{
 Reads a netCDF file and the plots the output

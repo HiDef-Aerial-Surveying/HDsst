@@ -9,6 +9,13 @@
     ]
   },
   "Packages": {
+    "ncdf4": {
+      "Package": "ncdf4",
+      "Version": "1.17",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5c1c0231b12b3d54cf619a3e5e36d229"
+    },
     "renv": {
       "Package": "renv",
       "Version": "0.13.0",
