@@ -4,13 +4,7 @@
 \alias{extract_sst}
 \title{Extract SST for a specific date/time}
 \usage{
-extract_sst(
-  year = "2013",
-  month = "01",
-  day = "01",
-  bbox = c(-15, 10, 45, 62),
-  plot.it = FALSE
-)
+extract_sst(year = "2013", month = "01", day = "01", bbox = c(-15, 10, 45, 62))
 }
 \arguments{
 \item{year}{A character string.}

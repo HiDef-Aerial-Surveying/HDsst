@@ -4,10 +4,12 @@
 \alias{plot.sst}
 \title{Plot one NCDF file downloaded from GHRSST}
 \usage{
-plot.sst(filepath, bbox = c(-15, 10, 45, 62))
+plot.sst(filepath = NULL, rast = NULL, bbox = c(-15, 10, 45, 62))
 }
 \arguments{
-\item{filepath}{A character string for the filename}
+\item{filepath}{A character string for the filename. If this argument is defined, plot it.}
+
+\item{rast}{A RasterLayer object. If this argument is defined, plot the raster}
 
 \item{bbox}{(optional) A vector in the format Xmin, Xmax, Ymin, Ymax for plotting.}
 }

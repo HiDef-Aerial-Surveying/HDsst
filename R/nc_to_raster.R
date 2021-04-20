@@ -7,6 +7,7 @@
 #' @import ncdf4
 #' @import raster
 #' @import rasterVis
+#' @importFrom sp CRS
 #' @examples
 #' r <- nc_to_raster(filepath="/ncdata.ncf",bbox=c(-15,10,45,62))
 #'
@@ -46,7 +47,7 @@ nc_to_raster <- function(filepath,bbox=c(-15,10,45,62)){
   r <- raster(t(sst.array),
               xmn=min(lon),
               xmx=max(lon), ymn=min(lat), ymx=max(lat),
-              crs=CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs+ towgs84=0,0,0"))
+              crs=sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs+ towgs84=0,0,0"))
 
   r <- flip(r, direction='y')
   if(identical(bbox,c(-15,10,45,62))){

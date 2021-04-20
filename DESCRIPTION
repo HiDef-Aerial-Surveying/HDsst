@@ -15,4 +15,5 @@ Imports:
     ncdf4,
     raster,
     rasterVis,
-    terra
+    terra,
+    sp
