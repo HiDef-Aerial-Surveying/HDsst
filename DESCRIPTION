@@ -14,4 +14,5 @@ RoxygenNote: 7.1.1
 Imports: 
     ncdf4,
     raster,
-    rasterVis
+    rasterVis,
+    terra
