@@ -37,7 +37,15 @@ sst_to_points <- function(year="2013",month="01",day="01",
                           ts = c("daily","biweekly", "monthly", "custom"),
                           time.range = NULL,
                           spatd,sst.grad=FALSE,epsg=NULL){
+  ## Set year, month and day to proper formats if they are accidentally put in as integers
+  year <- as.character(year)
+  month <- formatC(month,width=2,flag=0)
+  day <- formatC(day,width=2,flag=0)
 
+  ## Check that spatd is a spatialpointsdataframe
+  if(class(spatd)[1] != "SpatialPointsDataFrame"){
+    stop("input data (spatd) are not a SpatialPointsDataFrame")
+  }
 
   ## transform to the requested EPSG
   spat.proj <- sf::st_crs(epsg)$proj4string
