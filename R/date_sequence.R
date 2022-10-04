@@ -14,6 +14,8 @@
 date.sequence <- function(year,month,day,day.buffer){
   mdtime <- as.POSIXct(paste0(year,month,day),format="%Y%m%d")
 
+  sec.p.day <- 86400
+
   if(paste0(year,month,day) == "20130101"){
     sttime <- as.POSIXct("20130101",format="%Y%m%d")
   }else{
