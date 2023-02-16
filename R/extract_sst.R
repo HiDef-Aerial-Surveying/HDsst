@@ -20,6 +20,18 @@ extract_sst <- function(year="2013",month="01",day="01",bbox=c(-15,10,45,62)){
                        month,
                        day,
                        "090000-JPL-L4_GHRSST-SSTfnd-MUR-GLOB-v02.0-fv04.1_subset.nc")
+
+  #check if the file exists and if it doesn't - remove the "_subset" part of the name
+  if(file.exists(path_build) == FALSE){
+
+    #split into parts without subset
+    path_parts <- strsplit(path_build, "_subset")
+
+    #add the parts together again
+    path_build <- paste0(path_parts[[1]][1], path_parts[[1]][2])
+  }
+
+
   r <- nc_to_raster(filepath = path_build,bbox=bbox)
 
   return(r)
